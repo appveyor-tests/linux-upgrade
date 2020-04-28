@@ -9,9 +9,11 @@ install:
 - sh: sudo apt remove unattended-upgrades
 
 test_script:
-- sh: pgrep -a apt
 - sh: ls -al /etc/apt/apt.conf.d
 - sh: sudo apt-get -y update
 - sh: sudo apt-get -y upgrade
 
 build: off
+
+on_failure:
+- sh: pgrep -a apt
