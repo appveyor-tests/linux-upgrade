@@ -7,7 +7,7 @@ init:
 
 test_script:
 - sh: pgrep -a apt
-- sh: ls /etc/apt/apt.conf.d
+- sh: ls -al /etc/apt/apt.conf.d
 - sh: sudo apt-get -y update
 - sh: sudo apt-get -y upgrade
 
