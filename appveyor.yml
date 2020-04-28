@@ -5,8 +5,8 @@ init:
 - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 - sh: lsb_release -a
 
-install:
-- sh: sudo apt remove unattended-upgrades
+#install:
+#- sh: sudo apt remove unattended-upgrades
 
 test_script:
 - sh: ls -al /etc/apt/apt.conf.d
