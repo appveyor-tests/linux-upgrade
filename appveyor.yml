@@ -6,7 +6,7 @@ init:
 - sh: lsb_release -a
 
 install:
-- sh: apt remove unattended-upgrades
+- sh: sudo apt remove unattended-upgrades
 
 test_script:
 #- sh: pgrep -a apt
