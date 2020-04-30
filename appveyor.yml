@@ -1,4 +1,5 @@
 init:
+- sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 - appveyor version
 - ps: Update-AppveyorBuild -Message "Image '$env:APPVEYOR_BUILD_WORKER_IMAGE'@'$env:APPVEYOR_BUILD_WORKER_CLOUD' cloud. $env:APPVEYOR_REPO_COMMIT_MESSAGE"
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
@@ -17,4 +18,3 @@ build: off
 
 on_failure:
 - sh: pgrep -a apt
-- sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
