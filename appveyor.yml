@@ -12,6 +12,7 @@ test_script:
 - sh: ls -al /etc/apt/apt.conf.d
 - sh: sudo apt-get -y update
 - sh: sudo apt-get -y upgrade
+- sh: sudo apt-get -y install default-jdk
 
 build: off
 
