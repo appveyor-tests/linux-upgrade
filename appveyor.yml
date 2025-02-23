@@ -11,6 +11,7 @@ init:
 test_script:
 - sh: ls -al /etc/apt/apt.conf.d
 - sh: ls -al /etc/cron.daily/
+- sh: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 32EE5355A6BC6E42
 - sh: sudo apt-get -y update
 - sh: sudo apt-get -y upgrade
 
